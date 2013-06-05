@@ -1,0 +1,34 @@
+{
+    "name": "net_bazzline/php_symfony_console_application",
+    "type": "library",
+    "description": "php symfony console application extension as stev leibelt flavor using io",
+    "keywords": ["php", "bazzline", "symfony", "console", "io", "application"],
+    "homepage": "https://github.com/stevleibelt/php_symfony_console_application",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "stev leibelt",
+            "email": "artodeto@arcor.de",
+            "homepage": "http://artodeto.bazzline.net",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/console": "2.2.*@dev",
+        "net_bazzline/php_symfony_console_io" : "dev-master",
+        "net_bazzline/php_symfony_console_command": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*",
+        "mikey179/vfsStream": "dev-master",
+	    "mockery/mockery": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Net\\Bazzline\\Symfony\\Console\\Application": "source/",
+            "Test\\Net\\Bazzline\\Symfony\\Console\\Application": "test/"
+        }
+    }
+}
