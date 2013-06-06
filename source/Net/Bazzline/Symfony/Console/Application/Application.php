@@ -9,6 +9,7 @@ namespace Net\Bazzline\Symfony\Console\Application;
 use Net\Bazzline\Symfony\Console\IO\ConsoleIOFactory;
 use Net\Bazzline\Symfony\Console\IO\ConsoleIO;
 use Net\Bazzline\Symfony\Console\IO\IOAwareInterface;
+use Net\Bazzline\Symfony\Console\IO\IOInterface;
 use Symfony\Component\Console\Application as SymfonyApplication;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
