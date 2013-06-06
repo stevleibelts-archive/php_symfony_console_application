@@ -49,7 +49,8 @@ class Application extends SymfonyApplication
     {
         $command = parent::get($name);
 
-        if ($command instanceof IOAwareInterface) {
+        if (!is_null($this->io)
+            && $command instanceof IOAwareInterface) {
             $command->setIO($this->io);
         }
 
@@ -64,7 +65,8 @@ class Application extends SymfonyApplication
         $commands = parent::all($namespace);
 
         foreach ($commands as $command) {
-            if ($command instanceof IOAwareInterface) {
+            if (!is_null($this->io)
+                && $command instanceof IOAwareInterface) {
                 $command->setIO($this->io);
             }
         }
@@ -98,5 +100,17 @@ class Application extends SymfonyApplication
         $dimensions = $this->getTerminalDimensions();
 
         return $dimensions[0];
+    }
+
+    /**
+     * Returns current io object
+     *
+     * @return ConsoleIO
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-06-06
+     */
+    public function getIO()
+    {
+        return $this->io;
     }
 }
