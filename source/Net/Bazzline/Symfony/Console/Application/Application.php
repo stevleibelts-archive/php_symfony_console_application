@@ -21,7 +21,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-06-05
  */
-class Application extends SymfonyApplication
+class Application extends SymfonyApplication implements IOAwareInterface
 {
     /**
      * @var ConsoleIO
@@ -103,14 +103,26 @@ class Application extends SymfonyApplication
     }
 
     /**
-     * Returns current io object
-     *
-     * @return ConsoleIO
+     * @return \Net\Bazzline\Symfony\Console\IO\IOInterface
      * @author stev leibelt <artodeto@arcor.de>
-     * @since 2013-06-06
+     * @since 2013-05-31
      */
     public function getIO()
     {
         return $this->io;
+    }
+
+    /**
+     * @param \Net\Bazzline\Symfony\Console\IO\IOInterface $io
+     * @return Application
+     *
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-31
+     */
+    public function setIO(IOInterface $io)
+    {
+        $this->io = $io;
+
+        return $this;
     }
 }
