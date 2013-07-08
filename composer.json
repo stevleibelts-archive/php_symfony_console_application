@@ -4,7 +4,7 @@
     "description": "php symfony console application extension as stev leibelt flavor using io",
     "keywords": ["php", "bazzline", "symfony", "console", "io", "application"],
     "homepage": "https://github.com/stevleibelt/php_symfony_console_application",
-    "license": "MIT",
+    "license": "LGPLv3",
     "authors": [
         {
             "name": "stev leibelt",
