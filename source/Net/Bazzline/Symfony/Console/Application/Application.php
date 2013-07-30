@@ -32,7 +32,7 @@ class Application extends SymfonyApplication implements IOAwareInterface
     protected $io;
 
     /*
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function doRun(InputInterface $input, OutputInterface $output)
     {
@@ -44,7 +44,7 @@ class Application extends SymfonyApplication implements IOAwareInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function get($name)
     {
@@ -59,7 +59,7 @@ class Application extends SymfonyApplication implements IOAwareInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function all($namespace = null)
     {
@@ -76,7 +76,7 @@ class Application extends SymfonyApplication implements IOAwareInterface
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function add(Command $command)
     {
